@@ -1,0 +1,56 @@
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('category.png');
+}
+
+.categories {
+    text-align: center;
+    padding: 5px;
+}
+
+.categories h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 125px;
+    color: #fff;
+    margin-bottom: 50px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.5); /* Add shadow to the text */
+}
+
+.category-section {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between categories */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to the category sections */
+}
+
+.category-section:last-child {
+    margin-right: 0; /* Remove margin-right for the last category */
+}
+
+.category-section .category-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-section .category-content h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Apply Bebas Neue font */
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.category-section .category-content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 40px; /* Increased border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+    display: none;
+    /* other styles... */
+}
