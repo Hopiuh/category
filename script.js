@@ -1,28 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const categorySections = document.querySelectorAll('.category-section');
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the navigation links
+  const navLinks = document.querySelectorAll('nav ul li a');
 
-    categorySections.forEach(function(section) {
-        // section.addEventListener('mouseover', function() {
-        //     const popup = this.querySelector('.popup');
-        //     if (popup) {
-        //         popup.style.display = 'block';
-        //     }
-        // });
+  // Loop through each navigation link
+  navLinks.forEach(link => {
+      // Add event listener for mouseover event
+      link.addEventListener('mouseover', () => {
+          // Change the color to a different color when hovered over
+          link.style.color = '#B99976'; // You can replace '#FF5733' with any color you prefer
+      });
 
-        // section.addEventListener('mouseout', function() {
-        //     const popup = this.querySelector('.popup');
-        //     if (popup) {
-        //         popup.style.display = 'none';
-        //     }
-        // });
+      // Add event listener for mouseout event
+      link.addEventListener('mouseout', () => {
+          // Change the color back to the original color when not hovered over
+          link.style.color = '#74503E'; // You can replace '#74503E' with the original color
+      });
+  });
 
-        section.addEventListener('click', function() {
-            const categoryName = this.id;
-            redirectTo(categoryName + '.html');
-        });
-    });
+  // Get the categories
+  const categories = document.querySelectorAll('.category');
 
-    function redirectTo(page) {
-        window.location.href = page;
-    }
+  // Loop through each category
+  categories.forEach(category => {
+      category.addEventListener('mouseenter', () => {
+          category.querySelector('.category-image').style.transform = 'scale(1.1)';
+      });
+
+      category.addEventListener('mouseleave', () => {
+          category.querySelector('.category-image').style.transform = 'scale(1)';
+      });
+  });
 });
